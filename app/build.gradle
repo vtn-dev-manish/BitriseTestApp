@@ -6,6 +6,23 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+
+    flavorDimensions "brand"
+
+    productFlavors {
+        barcoo {
+            dimension "brand"
+            applicationId 'de.barcoo.android'
+            buildConfigField 'String', 'COUNTRY_CODE', '"DE"'
+            buildConfigField 'java.util.List<String>', 'SUPPORTED_LANGUAGES', 'java.util.Arrays.asList(new String[]{"de"})'
+        }
+        marktjagd {
+            dimension "brand"
+            applicationId 'de.marktjagd.android'
+            buildConfigField 'String', 'COUNTRY_CODE', '"DE"'
+            buildConfigField 'java.util.List<String>', 'SUPPORTED_LANGUAGES', 'java.util.Arrays.asList(new String[]{"de"})'
+        }
+    }
     defaultConfig {
         applicationId "com.example.bitrisetestapp"
         minSdkVersion 16
